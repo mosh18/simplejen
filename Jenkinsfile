@@ -3,21 +3,15 @@ pipeline {
 
     stages {
 
-        stage('Clone') {
+        stage('Check Files') {
             steps {
-                echo 'Cloning project...'
+                bat 'dir'
             }
         }
 
-        stage('Build') {
+        stage('Open HTML') {
             steps {
-                echo 'Building project...'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                echo 'Testing project...'
+                echo 'HTML project detected successfully'
             }
         }
     }
