@@ -9,9 +9,15 @@ pipeline {
             }
         }
 
-        stage('Run Server') {
+        stage('Start Server') {
             steps {
-                bat 'node server.js'
+                bat 'start /B node server.js'
+            }
+        }
+
+        stage('Success') {
+            steps {
+                echo 'HTML server started successfully'
             }
         }
     }
