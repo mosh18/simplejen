@@ -9,9 +9,9 @@ pipeline {
             }
         }
 
-        stage('Open HTML') {
+        stage('Run Server') {
             steps {
-                echo 'HTML project detected successfully'
+                bat 'node server.js'
             }
         }
     }
