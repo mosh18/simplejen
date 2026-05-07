@@ -9,15 +9,15 @@ pipeline {
             }
         }
 
-        stage('Start Server') {
+        stage('Deploy') {
             steps {
-                bat 'start /B node server.js'
+                bat 'xcopy /E /Y * C:\\deployed-app\\'
             }
         }
 
         stage('Success') {
             steps {
-                echo 'HTML server started successfully'
+                echo 'Project deployed successfully'
             }
         }
     }
